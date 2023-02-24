@@ -118,6 +118,9 @@
       grid-area: 6 / 1 / 7 / 3;
       margin-top: 5px;
     }
+    .img-mob  {
+      display: none;
+    }
     /* Mobile */
     @media (max-width:375px)  {
       body  {
@@ -134,7 +137,11 @@
         overflow-wrap: break-word;
         position: relative;
       }
-      img {
+      .img-desk {
+        display: none;
+      }
+      .img-mob {
+        display: block;
         width: 225px;
         height: 160px;
         grid-area: 1 / 1 / 2 / 1;
@@ -176,7 +183,8 @@
 </head>
 <body>
   <div class="cont">
-    <img src="./images/image-product-desktop.jpg" alt="perfume">
+    <img src="./imges/image-product-mobile.jpg" alt="perfume" class="img-mob">
+    <img src="./images/image-product-desktop.jpg" alt="perfume" class="img-desk">
     <div class="pre">Prefume</div>
     <h1>Gabrielle Essence Eau De Parfum</h1>
     <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, 
