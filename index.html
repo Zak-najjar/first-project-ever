@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="images/icon-cart.svg"/>
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body  {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .cont {
+      width: 350px;
+      height: 250px;
+      margin: 0 auto;
+      text-align: start;
+      display: grid;
+      grid-template-columns: repeat(2, 166);
+      grid-template-rows: 40px repeat(6, auto);
+      justify-content: start;
+      justify-items: start;
+      background-color: hsl(30, 38%, 92%);
+      gap: 0 20px;
+      border-radius: 2%;
+    }
+    img {
+      width: 168px;
+      height: 250px;
+      grid-area: 1 / 1 / 6 / 1;
+      justify-items: start;
+      border-radius: 2% 0 0 2%;
+    }
+    .pre {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin: 20px 0 0 0;
+      height: 10px;
+      font-size: 6px;
+      font-family: Arial, Helvetica, sans-serif;
+      grid-area: 1 / 2 / 1 / 3;
+      opacity: 0.5;
+      margin-left: -1px;
+    }
+    h1  {
+      width: 115px;
+      height: 60px;
+      font-size: 20px;
+      overflow-wrap: break-word;
+      line-height: 20px;
+    }
+    p {
+      font-size: 10px;
+      width: 150px;
+      height: 50px;
+      overflow-wrap: break-word;
+      line-height: 13px;
+      opacity: .6;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .price  {
+      font-family: "Fraunces";
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .price div:first-child  {
+      color: hsl(158, 36%, 37%);
+    }
+    .price div:last-child {
+      font-size: 8px;
+      opacity: 0.5;
+      align-self: flex-start;
+      line-height: 20px;
+      text-decoration: line-through;
+    }
+
+    .add  {
+      width: 130px;
+      height: fit-content;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8px;
+      font-weight: bold;
+      text-align: center;
+      background-color: hsl(158, 36%, 37%);
+      border-radius: 5px;
+      padding: 8px;
+      position: relative;
+    }
+    .icon {
+      font-size: 5px;
+      display: inline;
+      width: 10px;
+      height: 10px;
+      color: white;
+    }
+    .add:hover  {
+      background-color: hsl(158, 36%, 18%);
+      cursor: pointer;
+    }
+    .attribution  {
+      grid-area: 6 / 1 / 7 / 3;
+      margin-top: 5px;
+    }
+    /* Mobile */
+    @media (max-width:375px)  {
+      body  {
+        display: flex;
+        justify-content: center;
+      }
+      .cont {
+        width: 225px;
+        height: 450px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 160px repeat(5, auto);
+        border-radius: 2%;
+        overflow-wrap: break-word;
+        position: relative;
+      }
+      img {
+        width: 225px;
+        height: 160px;
+        grid-area: 1 / 1 / 2 / 1;
+        border-top-left-radius: 2%;
+        border-top-right-radius: 2%;
+      }
+      .pre  {
+        grid-area: 2 / 1 / 3 / 1;
+      }
+      h1 {
+        grid-area: 3 / 1 / 4 / 1;
+      }
+      p {
+        grid-area: 4 / 1 / 5 / 1;
+      }
+      .price  {
+        grid-area: 5 / 1 / 6 / 1;
+      }
+      .add  {
+        grid-area: 6 / 1 / 7 / 1;
+      }
+      .attribution  {
+        display: block;
+        align-self: flex-end;
+        position: absolute;
+        left: -20px;
+        top: 50px;
+      }
+      .pre,
+      h1,
+      p,
+      .price,
+      .add,
+      .attribution  {
+        margin-left: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cont">
+    <img src="./images/image-product-desktop.jpg" alt="perfume">
+    <div class="pre">Prefume</div>
+    <h1>Gabrielle Essence Eau De Parfum</h1>
+    <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+    Perfumer-Creator for the House of CHANEL.</p>
+    <div class="price">
+      <div>$149.99</div>
+      <div>$169.99</div>
+    </div>
+      <div class="add">
+      <img src="/images/icon-cart.svg" alt="icnon-cart" class="icon">
+      Add to Cart
+      </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Zakarea-najjar</a>.
+      </div>    
+  </div>
+</body>
+</html>
